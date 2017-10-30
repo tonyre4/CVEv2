@@ -1,6 +1,9 @@
-import gi
-gi.require_version("Gtk", "3.0")
-from gi.repository import Gtk as gtk
+import os
+
+if os.name == 'nt':
+    import gi
+    gi.require_version("Gtk", "3.0")
+    from gi.repository import Gtk as gtk
 
 def create_window():
     window = gtk.Window()
